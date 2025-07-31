@@ -109,14 +109,188 @@ solaryeconomy.commands.magnata       - Use /money magnata
 
 ## 📜 `config.yml`
 
-You can find the full translated and annotated version of `config.yml` [here in English ➜](https://pastebin.com/raw/xyz) *(you can host this externally if needed for your GitHub README)*.
+```yaml
+#########################[ Solary-Economy ]#########################
+##                                                                ##
+##       Found a bug? Please report it!                           ##
+##                                                                ##
+##       Email: theprog.matheus@gmail.com                         ##
+##       Discord: sr_edition                                      ##
+##                                                                ##
+####################################################################
+
+#/------------------------------------------------------------------/
+#     Author: ${project.author}
+#     Version: ${project.version}
+#/------------------------------------------------------------------/
+
+# Database Configuration
+
+mysql:
+  # Set to true to use MySQL. If false, SQLite (file "storage.db") will be used
+  enable: false
+  # Set your database host, e.g., "localhost"
+  # If your MySQL runs on a different port, specify it (e.g., "localhost:2789")
+  hostname: "localhost"
+  # Your database name, e.g., "minecraft"
+  database: "minecraft"
+  # Your database username
+  username: "root"
+  # Your database password
+  password: ""
+  # Table name used by the plugin
+  table: "solaryeconomy"
+
+# General plugin configuration
+
+# Main world name
+world: "world"
+
+# Enable Vault API integration (recommended for compatibility with other plugins)
+use_vault: true
+
+# Starting money for new players
+start_value: 0
+
+# Money Top (leaderboard) configuration
+economy_top:
+
+  # Number of players shown in /money top
+  size: 10
+
+  # Time interval (in seconds) to refresh the leaderboard (e.g., 300 = 5 minutes)
+  refresh_time: 300
+
+  # Enable prefixes in the money top (requires Vault)
+  prefix: true
+
+  # Max account name length to show on leaderboard (useful to hide faction names)
+  # If the account name is longer than this, it will not appear in /money top or receive the magnate tag
+  name_size: 16
+
+# Server currency configuration
+currency_name:
+
+  # Currency name in plural (e.g., coins)
+  plural: coins
+
+  # Currency name in singular (e.g., coin)
+  singular: coin
+
+# Enable magnate tag in leaderboard/chat (requires LegendChat plugin)
+# Use the tag {solary_economy_magnata} in LegendChat
+magnata_tag: true
+
+# Broadcast a message to all players when a new magnate is crowned
+magnata_broadcast: true
+
+# Value abbreviations configuration (useful for OP economies)
+abbreviations:
+
+  # Enable or disable abbreviation features
+  enable:
+    # Abbreviate values in messages
+    messages: true
+    # Abbreviate values in commands
+    commands: true
+
+  # Number of decimal places shown in abbreviations (e.g., 1.5k instead of 1k)
+  decimal_places: 1
+
+  # Abbreviation dictionary (you can add as many as you like)
+  dictionary:
+
+    # Thousand
+    k:
+      # How it appears in messages (e.g., 32k)
+      display: "k"
+      # Divider used (e.g., 1k = 1000)
+      divider: 1000
+
+    # Million
+    m:
+      display: "m"
+      divider: 1000000
+
+    # Billion
+    b:
+      display: "b"
+      divider: 1000000000
+
+    # Trillion
+    t:
+      display: "t"
+      divider: 1000000000000
+
+# Permissions:
+#
+###################[Commands]#######################
+#
+# /money - no permission required
+# /money help - no permission required
+# /money [player] - solaryeconomy.commands.money.other
+# /money top - solaryeconomy.commands.top
+# /money create - solaryeconomy.commands.criar
+# /money delete - solaryeconomy.commands.deletar
+# /money add - solaryeconomy.commands.add
+# /money remove - solaryeconomy.commands.remove
+# /money set - solaryeconomy.commands.set
+# /money pay - solaryeconomy.commands.pay
+# /money toggle - solaryeconomy.commands.toggle
+# /money reload - solaryeconomy.commands.reload
+# /money magnata - solaryeconomy.commands.magnata
+#
+###################[Commands]#######################
+
+###################[Placeholders]#######################
+#
+# %solaryeconomy_balance% - Player's raw balance
+# %solaryeconomy_balance_formatted% - Player's formatted balance
+#
+###################[Placeholders]#######################
+```
 
 ---
 
 ## 📜 `mensagens.yml`
 
-Same here — messages file has been translated and adapted.
-[Check out `mensagens.yml` in English ➜](https://pastebin.com/raw/abc)
+```yaml
+#/------------------------------------------------------------------/
+#     Autor: ${project.author}
+#     Versão: ${project.version}
+#/------------------------------------------------------------------/
+
+
+
+
+#configurações de todas as mensagens do Solary-Economy
+
+NO_PERMISSION: "&cVocê não tem permissão para isso."
+PLAYER_NOTFOUND: "&cJogador não encontrado em nosso banco de dados."
+MONEY: "&aMoney: {valor}"
+NO_MONEY: "&cVocê não tem money suficiente para isso."
+MONEY_TOGGLE: "&aRecebimento de coins: {toggle}"
+MONEY_TOGGLED: "&cEste jogador está com o recebimento de coins desativado."
+MONEY_OTHER: "&aMoney de {player}: {valor}"
+MONEY_TOP_NULL: "&cNão existe jogadores cadastrados ainda."
+MONEY_TOP_TITLE: "&2Top 10 Mais Ricos &7(Atualizado de 5 em 5 minutos)"
+MONEY_TOP_FORMAT: "&a{i}. &2{player}: &7({valor})"
+NUMBER_NULL: "&cValor incorreto, por favor insira um valor válido."
+ACCOUNT_EXISTS: "&cJá existe uma conta com o nome '{nome}'!"
+ACCOUNT_CREATE: "&aConta '{nome}' criada com sucesso!"
+ACCOUNT_DELETE: "&aConta '{nome}' deletada com sucesso!"
+ACCOUNT_NOFOUND: "&cConta '{nome}' não encontrada em nosso banco de dados."
+MONEY_SET: "&aFoi setado a quantia de {valor} na conta de {player} "
+MONEY_ADD: "&aFoi adicionado a conta de {player} a quantia de {valor}"
+MONEY_REMOVE: "&aFoi removido a quantia de {valor} da conta de {player} "
+MONEY_PAY_SENDER: "&aVocê enviou {valor} para {player}"
+MONEY_PAY_RECEIVER: "&aVocê acaba de receber {valor} de {player}"
+MONEY_PAY_ERRO: "&cVocê não pode enviar coins a si mesmo."
+MAGNATA_TAG: "&2[$] "
+MAGNATA_VIEW: "&2[$] &aAtual magnata do servidor: &7{player} &7com a quantia de {valor}"
+MAGNATA_NEW: "&2[$] &aNovo magnata: &7{player} &7com a quantia de {valor}"
+MAGNATA_NOT_FOUND: "&2[$] &cNenhum magnata ainda."
+```
 
 ---
 
