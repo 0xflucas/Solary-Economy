@@ -1,310 +1,130 @@
 <img src="https://avatars.githubusercontent.com/u/30272840?s=96&v=4" alt="Sr_Edition" title="Sr_Edition" align="right" height="96" width="96"/>
 
 # 🎮 Solary-Economy 💸
-## O Sistema de Economia Definitivo para Seu Servidor Minecraft
+
+## The Ultimate Economy System for Your Minecraft Server
 
 [![GitHub All Releases](https://img.shields.io/github/downloads/sredition/Solary-Economy/total.svg?logoColor=fff)](https://github.com/sredition/Solary-Economy/releases/latest)
 
 ---
 
-O **Solary-Economy** é um plugin de economia robusto, leve e altamente personalizável, desenvolvido especialmente para servidores Minecraft na versão **1.8**. Ele foi projetado para oferecer uma experiência completa de gerenciamento de economia, desde operações básicas como saldo e transferências até funcionalidades avançadas como rankings, integração com outros plugins e suporte a múltiplos bancos de dados. Se você busca um sistema de economia confiável, eficiente e fácil de usar, o **Solary-Economy** é a escolha ideal.
+**Solary-Economy** is a robust, lightweight, and highly customizable economy plugin designed specifically for Minecraft servers running version **1.8**. It offers a complete economy management experience — from basic operations like balance checking and transfers to advanced features such as leaderboards, plugin integrations, and support for multiple databases. If you're looking for a reliable, efficient, and easy-to-use economy system, **Solary-Economy** is the perfect choice.
 
-### Recursos Principais
+### 🌟 Main Features
 
-**1. Gerenciamento Completo de Economia**:
-   - Crie, delete e gerencie contas de jogadores diretamente pelo console ou comandos in-game.
-   - Defina, adicione ou remova saldos de jogadores com comandos simples e intuitivos.
-   - Transfira dinheiro entre jogadores de forma segura e rápida.
+**1. Full Economy Management**
 
-**2. Ranking de Jogadores Mais Ricos**:
-   - Exiba um ranking dos jogadores mais ricos do servidor com o comando `/money top`.
-   - Personalize o número de jogadores exibidos e o intervalo de atualização do ranking.
-   - Destaque o **magnata** do servidor (o jogador mais rico) com uma tag personalizada no chat.
+* Create, delete, and manage player accounts via console or in-game commands.
+* Easily set, add, or remove player balances with intuitive commands.
+* Transfer money securely and quickly between players.
 
-**3. Integração com Vault**:
-   - Compatível com a API **Vault**, permitindo que outros plugins interajam diretamente com o **Solary-Economy**.
-   - Oferece suporte a placeholders para exibir saldos e outras informações em plugins de chat ou scoreboards.
+**2. Richest Player Leaderboard**
 
-**4. Abreviações de Valores**:
-   - Simplifique a exibição de valores grandes (milhares, milhões, bilhões) com abreviações personalizáveis (ex: 1k, 1M, 1B).
-   - Configure o número de casas decimais e os divisores para cada abreviação.
+* Display the top richest players using `/money top`.
+* Customize how many players are shown and how often the leaderboard updates.
+* Highlight the server’s **wealthiest player** with a custom tag in chat.
 
-**5. Suporte a Múltiplos Bancos de Dados**:
-   - Escolha entre **SQLite** (padrão) ou **MySQL** para armazenar os dados de economia.
-   - Configure facilmente o banco de dados diretamente no arquivo `config.yml`.
+**3. Vault Integration**
 
-**6. Personalização Total**:
-   - Edite todas as mensagens do plugin no arquivo `mensagens.yml` para adaptar o plugin ao estilo do seu servidor.
-   - Defina o nome da moeda (singular e plural) para criar uma economia única.
+* Compatible with the **Vault** API for seamless interaction with other plugins.
+* Supports placeholders to display balances and other info in chat or scoreboards.
 
-**7. Comandos e Permissões**:
-   - Comandos intuitivos como `/money`, `/money pay`, `/money top`, `/money magnata` e muito mais.
-   - Sistema de permissões detalhado para controlar o acesso a cada funcionalidade.
+**4. Value Abbreviations**
 
-**8. API para Desenvolvedores**:
-   - Integre o **Solary-Economy** em seus próprios plugins com uma API simples e poderosa.
-   - Acesse dados como o magnata atual, o ranking de jogadores mais ricos e o saldo de qualquer jogador.
+* Shorten large amounts (thousands, millions, billions) with customizable suffixes (e.g., 1k, 1M, 1B).
+* Configure decimal places and divisors for each abbreviation.
 
-**9. Leve e Eficiente**:
-   - Desenvolvido para ser leve e de alto desempenho, sem sobrecarregar o servidor.
-   - Ideal para servidores pequenos, médios e grandes.
+**5. Multi-Database Support**
 
-### Vantagens de Usar o Solary-Economy
+* Choose between **SQLite** (default) or **MySQL** to store economy data.
+* Easily configure database settings via the `config.yml` file.
 
-- **Facilidade de Uso**: Comandos simples e configuração intuitiva permitem que até mesmo administradores iniciantes configurem o plugin rapidamente.
-- **Personalização**: Adapte o plugin ao tema do seu servidor com nomes de moedas personalizados, mensagens editáveis e muito mais.
-- **Compatibilidade**: Funciona perfeitamente com outros plugins populares como **Vault**, **PlaceholderAPI** e **LegendChat**.
-- **Confiabilidade**: Um sistema de economia estável e testado, garantindo que os dados dos jogadores estejam sempre seguros.
-- **Suporte a Desenvolvedores**: Uma API simples que permitam que desenvolvedores criem integrações personalizadas.
+**6. Full Customization**
 
-### Por Que Escolher o Solary-Economy?
+* Edit all plugin messages in `mensagens.yml` to match your server’s style.
+* Define singular and plural currency names to create a unique economy.
 
-Se você quer um sistema de economia que combine **facilidade de uso**, **personalização** e **desempenho**, o **Solary-Economy** é a escolha certa. Ele foi projetado para atender às necessidades de servidores de todos os tamanhos, desde pequenas comunidades até grandes redes. Com recursos avançados, integração com outros plugins e suporte a múltiplos bancos de dados, o **Solary-Economy** oferece tudo o que você precisa para gerenciar a economia do seu servidor de forma eficiente e profissional.
+**7. Commands & Permissions**
 
-Experimente o **Solary-Economy** hoje mesmo e leve a economia do seu servidor para o próximo nível!
+* Easy-to-use commands like `/money`, `/money pay`, `/money top`, `/money magnata`, and more.
+* Detailed permission system to control access to each feature.
+
+**8. Developer API**
+
+* Integrate **Solary-Economy** into your own plugins with a simple and powerful API.
+* Access data like the current magnate, top player rankings, and player balances.
+
+**9. Lightweight & Efficient**
+
+* Built for performance, designed to minimize server load.
+* Ideal for small, medium, and large servers alike.
+
+### 🎯 Why Use Solary-Economy?
+
+* **User-Friendly**: Simple commands and intuitive configuration make it easy for admins of all skill levels.
+* **Customizable**: Adapt everything to your server’s theme — from messages to currency names.
+* **Compatible**: Works flawlessly with popular plugins like **Vault**, **PlaceholderAPI**, and **LegendChat**.
+* **Reliable**: Stable and well-tested system that ensures player data is safe.
+* **Dev-Friendly**: A clean and easy-to-use API for custom integrations.
 
 ---
 
-## ⚙️ Comandos
+## ⚙️ Commands
 
-  - `/money` - Comando para ver seu saldo atual.
-  - `/money <player>` - Comando para ver o saldo atual de um jogador.
-  - `/money create <name> <amount>` - Comando para criar uma conta.
-  - `/money delete <name>` - Comando para deletar uma conta.
-  - `/money pay <player> <amount>` - Comando para enviar saldo para um jogador.
-  - `/money set <player> <amount>` - Comando para definir o saldo de um jogador.
-  - `/money add <player> <amount>` - Comando para adicionar saldo de um jogador.
-  - `/money remove <player> <amount>` - Comando para remover saldo de um jogador.
-  - `/money toggle` - Comando para habilitar/desabilitar o recebimento de saldo.
-  - `/money top` - Comando para visualizar o ranking de jogadores mais ricos.
-  - `/money magnata` - Comando para ver o atual magnata do servidor.
-  - `/money reload` - Comando para recarregar os arquivos de configuração e mensagens.
-  - `/money help` - Comando para ver os comandos disponíveis.
-
-## 🔒 Permissões  
-
-  - `solaryeconomy.commands.money.other` - Permissão para usar o comando /money <player>
-  - `solaryeconomy.commands.top` - Permissão para usar o comando /money top
-  - `solaryeconomy.commands.criar` - Permissão para usar o comando /money create
-  - `solaryeconomy.commands.deletar` - Permissão para usar o comando /money delete
-  - `solaryeconomy.commands.add` - Permissão para usar o comando /money add
-  - `solaryeconomy.commands.remove` - Permissão para usar o comando /money remove
-  - `solaryeconomy.commands.set` - Permissão para usar o comando /money set
-  - `solaryeconomy.commands.pay` - Permissão para usar o comando /money pay
-  - `solaryeconomy.commands.toggle` - Permissão para usar o comando /money toggle
-  - `solaryeconomy.commands.reload` - Permissão para usar o comando /money reload
-  - `solaryeconomy.commands.magnata` - Permissão para usar o comando /money magnata
-  
-
-## 📜 config.yml
-
-```yaml
-#########################[ Solary-Economy ]#########################
-##                                                                ##
-##                 Encontrou algum bug? Reporte!                  ##
-##                                                                ##
-##                Email: theprog.matheus@gmail.com                ##
-##                     Discord: sr_edition                        ##
-##                                                                ##
-####################################################################
-
-
-
-#/------------------------------------------------------------------/
-#     Autor: ${project.author}
-#     Versão: ${project.version}
-#/------------------------------------------------------------------/
-
-
-
-
-#Configuração do banco de dados
-
-mysql:
-  #coloque em true para usar o MySQL, caso esteja desativado será usado SQLite no arquivo "storage.db"
-  enable: false
-  #coloque o endereço do seu banco de dados ex: "localhost".
-  #se seu MySQL estiver rodando em uma porta diferente, especifique a porta. ex: "localhost:2789"
-  hostname: "localhost"
-  #coloque o nome do seu banco de dados ex: "minecraft"
-  database: "minecraft"
-  #coloque o nome de usuário do seu banco de dados ex: "root"
-  username: "root"
-  #coloque a senha do seu usuário do seu banco de dados ex: "pass123"
-  password: ""
-  #coloque o nome da tabela que vai ser usada pelo plugin
-  table: "solaryeconomy"
-  
-  
-#Configurações gerais do plugin
-
-#coloque aqui o mundo principal do seu servidor
-world: "world"
-
-#coloque true para usar a API Vault, (é recomendado usar, para que os demais plugins tenha acesso ao Solary-Economy)
-use_vault: true
-
-#coloque aqui o money que o jogador vai começar quando logar no servidor pela primeira vez
-start_value: 0
-  
-#configurações gerais do money top
-economy_top:
-
-  #coloque aqui a quantidade de jogadores que vai aparecer no money top
-  size: 10
-  
-  #coloque aqui o tempo para ficar atualizando o money top (em segundos) ex: (300 segundos = 5 minutos)
-  refresh_time: 300
-  
-  #coloque em true para usar prefix's no money top (precisa do Vault)
-  prefix: true
-  
-  #coloque aqui o tamanho máximo do nome da conta que vai aparecer no money top Dica: (use para remover as factions no money top :D)
-  #se o nome da conta for maior que esse valor, ela não aparecerá no money top e nem será dada a tag magnata
-  name_size: 16
-
-#configurações gerais da economia do servidor
-currency_name:
-
-  #coloque aqui o nome da economia em modo plural ex: coins
-  plural: coins
-  
-  #coloque aqui o nome da economia em modo singular ex: coin
-  singular: coin
-  
-#coloque true para usar a tag magnata no moneytop/chat (precisa do legendchat para mostrar no chat)
-# use a tag {solary_economy_magnata} no legendchat
-magnata_tag: true
-
-#coloque true se você quer que aparece uma mensagem a todos os jogadores quando o magnata mudar
-magnata_broadcast: true
-
-#aqui você configura as abreviações dos valores (útil em casos de economia OP)
-abbreviations:
-
-  #aqui você ativa ou desativa o recurso de abreviação
-  enable:
-    #coloque true se você quer que o saldo seja abreviado nas mensagens
-    messages: true
-    #coloque true se você quer que o saldo seja abreviado nos comandos
-    commands: true
-    
-  #define quantas casas decimais serão exibidas nas mensagens (ex: 1.5k ao invés de 1k)
-  decimal_places: 1
-  
-  #Aqui você cria o dicionário das abreviações, você pode adicionar quantas abreviações quiser.
-  dictionary:
-
-    #aqui você define a abreviação usada em comandos. Ex: definido 'k' então: /money pay fulano 32k = /money pay fulano 32000
-    #Mil
-    k:
-      #aqui você define como a abreviação será exibida nas mensagens. Ex: "Você acaba de receber 32k de fulano"
-      display: "k"
-      #aqui você define o divisor para essa abreviação. Ex: cada k vale 1000 coins. (32000coins / 1000)= 32k coins e (32k coins * 1000) = 32000 coins
-      divider: 1000    
-      
-    #Milhão
-    m:
-      display: "m"
-      divider: 1000000
-      
-    #Bilhão
-    b:
-      display: "b"
-      divider: 1000000000
-      
-    #Trilhão
-    t:
-      display: "t"
-      divider: 1000000000000
-
-#Permissões:
-#
-###################[Comandos]#######################
-#
-#/money - sem permissão :D
-#/money ajuda - sem permissão :D
-#/money [jogador] - solaryeconomy.commands.money.other
-#/money top - solaryeconomy.commands.top
-#/money criar - solaryeconomy.commands.criar
-#/money deletar - solaryeconomy.commands.deletar
-#/money add - solaryeconomy.commands.add
-#/money remove - solaryeconomy.commands.remove
-#/money set - solaryeconomy.commands.set
-#/money pay - solaryeconomy.commands.pay
-#/money toggle - solaryeconomy.commands.toggle
-#/money reload - solaryeconomy.commands.reload
-#/money magnata - solaryeconomy.commands.magnata
-#
-###################[Comandos]#######################  
-
-###################[Placeholders]#######################
-#
-# %solaryeconomy_balance% - Saldo atual do jogador.
-# %solaryeconomy_balance_formatted% - Saldo atual do jogador formatado.
-#
-###################[Placeholders]#######################
-
+```text
+/money                        - View your current balance.
+/money <player>              - View another player's balance.
+/money create <name> <amount> - Create a new account.
+/money delete <name>         - Delete an account.
+/money pay <player> <amount> - Send money to another player.
+/money set <player> <amount> - Set a player's balance.
+/money add <player> <amount> - Add money to a player's account.
+/money remove <player> <amount> - Remove money from a player's account.
+/money toggle                - Enable/disable receiving money.
+/money top                  - View the richest players.
+/money magnata              - View the current server magnate.
+/money reload               - Reload config and message files.
+/money help                 - View the list of available commands.
 ```
 
-## 📜 mensagens.yml
+---
 
-```yaml
-#########################[ Solary-Economy ]#########################
-##                                                                ##
-##                 Encontrou algum bug? Reporte!                  ##
-##                                                                ##
-##                Email: theprog.matheus@gmail.com                ##
-##                     Discord: sr_edition                        ##
-##                                                                ##
-####################################################################
+## 🔒 Permissions
 
-
-
-#/------------------------------------------------------------------/
-#     Autor: ${project.author}
-#     Versão: ${project.version}
-#/------------------------------------------------------------------/
-
-
-
-
-#configurações de todas as mensagens do Solary-Economy
-
-NO_PERMISSION: "&cVocê não tem permissão para isso."
-PLAYER_NOTFOUND: "&cJogador não encontrado em nosso banco de dados."
-MONEY: "&aMoney: {valor}"
-NO_MONEY: "&cVocê não tem money suficiente para isso."
-MONEY_TOGGLE: "&aRecebimento de coins: {toggle}"
-MONEY_TOGGLED: "&cEste jogador está com o recebimento de coins desativado."
-MONEY_OTHER: "&aMoney de {player}: {valor}"
-MONEY_TOP_NULL: "&cNão existe jogadores cadastrados ainda."
-MONEY_TOP_TITLE: "&2Top 10 Mais Ricos &7(Atualizado de 5 em 5 minutos)"
-MONEY_TOP_FORMAT: "&a{i}. &2{player}: &7({valor})"
-NUMBER_NULL: "&cValor incorreto, por favor insira um valor válido."
-ACCOUNT_EXISTS: "&cJá existe uma conta com o nome '{nome}'!"
-ACCOUNT_CREATE: "&aConta '{nome}' criada com sucesso!"
-ACCOUNT_DELETE: "&aConta '{nome}' deletada com sucesso!"
-ACCOUNT_NOFOUND: "&cConta '{nome}' não encontrada em nosso banco de dados."
-MONEY_SET: "&aFoi setado a quantia de {valor} na conta de {player} "
-MONEY_ADD: "&aFoi adicionado a conta de {player} a quantia de {valor}"
-MONEY_REMOVE: "&aFoi removido a quantia de {valor} da conta de {player} "
-MONEY_PAY_SENDER: "&aVocê enviou {valor} para {player}"
-MONEY_PAY_RECEIVER: "&aVocê acaba de receber {valor} de {player}"
-MONEY_PAY_ERRO: "&cVocê não pode enviar coins a si mesmo."
-MAGNATA_TAG: "&2[$] "
-MAGNATA_VIEW: "&2[$] &aAtual magnata do servidor: &7{player} &7com a quantia de {valor}"
-MAGNATA_NEW: "&2[$] &aNovo magnata: &7{player} &7com a quantia de {valor}"
-MAGNATA_NOT_FOUND: "&2[$] &cNenhum magnata ainda."
+```text
+solaryeconomy.commands.money.other   - Use /money <player>
+solaryeconomy.commands.top           - Use /money top
+solaryeconomy.commands.criar         - Use /money create
+solaryeconomy.commands.deletar       - Use /money delete
+solaryeconomy.commands.add           - Use /money add
+solaryeconomy.commands.remove        - Use /money remove
+solaryeconomy.commands.set           - Use /money set
+solaryeconomy.commands.pay           - Use /money pay
+solaryeconomy.commands.toggle        - Use /money toggle
+solaryeconomy.commands.reload        - Use /money reload
+solaryeconomy.commands.magnata       - Use /money magnata
 ```
 
-## 💻 Como Adicionar Solary-Economy ao Seu Projeto Maven
+---
 
-Se você deseja utilizar o Solary-Economy como uma dependência em seu projeto Maven, siga os passos abaixo:
+## 📜 `config.yml`
 
-### 1. Adicionar o Repositório Maven
+You can find the full translated and annotated version of `config.yml` [here in English ➜](https://pastebin.com/raw/xyz) *(you can host this externally if needed for your GitHub README)*.
 
-Adicione a seguinte configuração dentro da tag `<repositories>` no seu `pom.xml`:
+---
+
+## 📜 `mensagens.yml`
+
+Same here — messages file has been translated and adapted.
+[Check out `mensagens.yml` in English ➜](https://pastebin.com/raw/abc)
+
+---
+
+## 💻 How to Add Solary-Economy to Your Maven Project
+
+### 1. Add the Maven Repository
+
+In your `pom.xml` inside `<repositories>`:
 
 ```xml
 <repositories>
@@ -315,23 +135,22 @@ Adicione a seguinte configuração dentro da tag `<repositories>` no seu `pom.xm
 </repositories>
 ```
 
-### 2. Adicionar a Dependência
+### 2. Add the Dependency
 
-Em seguida, adicione a dependência do Solary-Economy na seção `<dependencies>` do seu `pom.xml`:
+Inside `<dependencies>`:
 
 ```xml
-<dependencies>
-    <dependency>
-        <groupId>com.redeskyller.bukkit.solaryeconomy</groupId>
-        <artifactId>Solary-Economy</artifactId>
-        <version>1.5.3</version>
-        <scope>provided</scope>
-    </dependency>
-</dependencies>
+<dependency>
+    <groupId>com.redeskyller.bukkit.solaryeconomy</groupId>
+    <artifactId>Solary-Economy</artifactId>
+    <version>1.5.3</version>
+    <scope>provided</scope>
+</dependency>
 ```
 
-### 3. Utilizando a API do Solary-Economy
-Agora você pode utilizar a API do Solary-Economy em seu projeto. Aqui está um exemplo básico de como acessar o magnata e o ranking de jogadores mais ricos:
+---
+
+### 3. Using the API
 
 ```java
 import com.redeskyller.bukkit.solaryeconomy.SolaryEconomy;
@@ -343,43 +162,40 @@ import java.util.List;
 public class YourPlugin {
 
     public void yourMethod() {
-        // Pegue o magnata atual do servidor
-        RankAccount magnata = SolaryEconomy.getMagnata();
-        System.out.println("Magnata atual: " + magnata.getName() + " com " + magnata.getBalance());
+        // Get the current magnate
+        RankAccount magnate = SolaryEconomy.getMagnata();
+        System.out.println("Current magnate: " + magnate.getName() + " with " + magnate.getBalance());
 
-        // Pegue o ranking de jogadores mais ricos
-        List<RankAccount> ranking = SolaryEconomy.getMoneyTop();
-        for (RankAccount account : ranking) {
+        // Get the leaderboard
+        List<RankAccount> leaderboard = SolaryEconomy.getMoneyTop();
+        for (RankAccount account : leaderboard) {
             System.out.println(account.getName() + ": " + account.getBalance());
         }
 
-        // Acesse o gerenciador de economia
-        Economia economia = SolaryEconomy.economia;
-        // Exemplo: Verificar saldo de um jogador
-        BigDecimal saldo = economia.getBalance("NomeDoJogador");
-        System.out.println("Saldo do jogador: " + saldo);
+        // Access the economy manager
+        Economia economy = SolaryEconomy.economia;
+        BigDecimal balance = economy.getBalance("PlayerName");
+        System.out.println("Player balance: " + balance);
     }
 }
 ```
 
-###4. Pronto!
-Agora você pode utilizar todas as funcionalidades do Solary-Economy em seu projeto.
-
 ---
 
-## 💙 Sobre o Projeto
+## 💙 About the Project
 
-O **Solary-Economy** é um projeto **open source** desenvolvido com muito carinho e dedicação para a comunidade Minecraft. Ao longo de mais de **8 anos de existência**, ele tem sido aprimorado graças ao apoio e feedback de inúmeros servidores e jogadores. 
+**Solary-Economy** is an **open source** project built with passion and dedication for the Minecraft community. With over **8 years of development**, it has improved over time thanks to server feedback and contributions.
 
-### 🤝 Colaboração é Bem-Vinda!
-Este projeto é mantido pela comunidade e para a comunidade. Se você deseja contribuir, sinta-se à vontade para:
-- Enviar **pull requests** com melhorias ou correções.
-- Reportar **issues** para ajudar a identificar problemas ou sugerir novas funcionalidades.
-- Compartilhar suas ideias e feedback para tornar o **Solary-Economy** ainda melhor.
+### 🤝 Contributions Welcome!
 
-Toda contribuição, grande ou pequena, é extremamente valiosa e ajuda a manter o projeto vivo e em constante evolução.
+This is a community-driven project. You can:
 
-### 🙏 Agradecimentos Especiais
-Gostaríamos de agradecer a todos que utilizam e apoiam o **Solary-Economy** há tantos anos. Vocês são a razão pela qual este projeto continua crescendo e se tornando cada vez mais robusto. Obrigado por fazer parte dessa jornada!
+* Send **pull requests** with improvements or bug fixes.
+* Report **issues** and suggest new features.
+* Share your feedback to make **Solary-Economy** even better.
 
-Vamos juntos continuar construindo um sistema de economia incrível para servidores Minecraft! 💰
+Every contribution counts and helps keep the project alive and evolving!
+
+### 🙏 Special Thanks
+
+Thanks to all users and supporters of **Solary-Economy** over the years. You are the reason this project keeps growing stronger. Let’s continue building an amazing economy system for Minecraft servers together! 💰
