@@ -150,12 +150,12 @@ public class Economia {
 
 	public Economia saveAll()
 	{
-		SolaryEconomy.getInstance().getLogger().info("Salvando dados de economia....");
+		// SolaryEconomy.getInstance().getLogger().info("Salvando dados de economia....");
 		
 		for (Account account : this.accounts.values()) 
 			account.save();
 
-		SolaryEconomy.getInstance().getLogger().info("Dados salvos com sucesso.");
+		// SolaryEconomy.getInstance().getLogger().info("Dados salvos com sucesso.");
 		return this;
 	}
 

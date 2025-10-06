@@ -79,7 +79,11 @@ public class SolaryEconomy extends JavaPlugin {
 		if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null)
 			PlaceholdersHook.install();
 
-		checkUpdate();
+		Bukkit.getConsoleSender().sendMessage("§a[SolaryEconomy] Plugin habilitado com sucesso!");
+		Bukkit.getConsoleSender().sendMessage("");
+		Bukkit.getConsoleSender().sendMessage("§a[SolaryEconomy] §f§lForked §fby 0xflucas, version: §a" + this.getDescription().getVersion() + "!");
+		Bukkit.getConsoleSender().sendMessage("");
+
 	}
 
 	@Override
@@ -133,25 +137,27 @@ public class SolaryEconomy extends JavaPlugin {
 
 	public CurrencyFormatter loadCurrencyFormatter() {
 
-		if (config.contains("abbreviations") && (config.getBoolean("abbreviations.enable.messages")
-				|| config.getBoolean("abbreviations.enable.commands"))) {
+		if (config.contains("abbreviations") &&
+				(config.getBoolean("abbreviations.enable.messages") || config.getBoolean("abbreviations.enable.commands"))) {
 
 			ConfigurationSection dictionarySection = config.getConfigurationSection("abbreviations.dictionary");
 			if (dictionarySection != null) {
 				getLogger().info("Carregando dicionário de abreviações:");
 
-				TreeMap<BigDecimal, String> dictionary = new TreeMap<BigDecimal, String>();
+				TreeMap<BigDecimal, String> dictionary = new TreeMap<>();
 				Map<String, String> displays = new HashMap<>();
+
 				for (String key : dictionarySection.getKeys(false)) {
 					ConfigurationSection value = dictionarySection.getConfigurationSection(key);
 					dictionary.put(new BigDecimal(value.getDouble("divider")), key);
 
-					if (value.getString("display") != null && !value.getString("display").isBlank())
-						displays.put(key, value.getString("display"));
+					String display = value.getString("display");
+					if (display != null && !display.trim().isEmpty()) {
+						displays.put(key, display);
+					}
 
-					getLogger().info("Carregando abreviação: " + key + ", " + value.getString("display") + ", "
+					getLogger().info("Carregando abreviação: " + key + ", " + display + ", "
 							+ value.getDouble("divider"));
-
 				}
 
 				currencyFormatter = new CurrencyFormatter(dictionary, displays);
@@ -197,48 +203,4 @@ public class SolaryEconomy extends JavaPlugin {
 		return economia.getMoneyTop();
 	}
 
-	/**
-	 * 
-	 * Este trecho de código foi COPIADO! do projeto 'SrEmpregos' do SrBlecaute01.
-	 * URL: https://github.com/SrBlecaute01/SrEmpregos
-	 * 
-	 * Agradecimentos ao VitorBlog pelo seu tutorial de como fazer as verificações
-	 * de atualizações ;)
-	 */
-	private void checkUpdate() {
-		CompletableFuture.runAsync(() -> {
-			try {
-				String link = "https://api.github.com/repos/sredition/Solary-Economy/releases/latest";
-				String version = this.getDescription().getVersion();
-
-				URL url = new URL(link);
-				URLConnection connection = url.openConnection();
-				try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()))) {
-					String response = reader.lines().collect(Collectors.joining("\n"));
-
-					JSONObject jsonObject = (JSONObject) new JSONParser().parse(response);
-					String latestVersion = (String) jsonObject.get("tag_name");
-					String download = (String) jsonObject.get("html_url");
-					if (!version.equals(latestVersion)) {
-						getLogger().info("");
-						getLogger().warning("Você está usando uma versão desatualizada do plugin!");
-						getLogger().info("");
-						getLogger().info(" Uma nova versão está disponível!");
-						getLogger().info(" Versão atual: " + version);
-						getLogger().info(" Nova versão: " + latestVersion);
-						getLogger().info("");
-						getLogger().info(" Para baixar a versão mais recente abra o link abaixo:");
-						getLogger().info(" " + download);
-						getLogger().info("");
-
-					} else {
-						getLogger().info("Você está na versão mais recente do plugin");
-					}
-				}
-			} catch (Exception xception) {
-				getLogger().severe("Ocorreu um erro ao tentar verificar as atualizações: " + xception.getMessage());
-			}
-
-		}, ForkJoinPool.commonPool());
-	}
 }

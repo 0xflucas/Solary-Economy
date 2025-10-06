@@ -31,7 +31,7 @@ public class CurrencyFormatter {
 		BigDecimal abbreviatedValue = value.divide(divisor, 2, BigDecimal.ROUND_DOWN);
 
 		return abbreviatedValue.stripTrailingZeros().toPlainString()
-				+ (display != null && !display.isBlank() ? display : suffix);
+				+ ((display != null && !display.trim().isEmpty()) ? display : suffix);
 	}
 
 	public BigDecimal unAbbreviate(String value) {

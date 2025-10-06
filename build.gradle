@@ -1,0 +1,62 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group = 'com.redeskyller.bukkit.solaryeconomy'
+version = '1.5.3'
+description = 'Um sistema de economia para seu servidor Minecraft.'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(8)
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven { url 'https://raw.githubusercontent.com/theprogmatheus/maven-repository/master/' }
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
+    compileOnly files('lib/Spigot-1.8.8-R0.1-SNAPSHOT.jar')
+    compileOnly files('lib/Vault.jar')
+
+    compileOnly 'me.clip.placeholderapi:PlaceholderAPI:2.9.2'
+    compileOnly 'br.com.devpaulo.legendchat:LegendChat:1.1.5'
+}
+
+// desabilita o jar padrão, usamos só o shadow
+tasks.jar {
+    enabled = false
+}
+
+tasks.shadowJar {
+    archiveBaseName.set('Solary-Economy')
+    destinationDirectory.set(file("$buildDir/libs"))
+    exclude '**/*.java', '**/*.SF', '**/*.DSA'
+}
+
+// copia o jar gerado para a pasta do servidor
+tasks.register('copyPlugin', Copy) {
+    dependsOn(tasks.named('shadowJar'))
+
+    from(tasks.named('shadowJar').flatMap { it.archiveFile })
+
+    // <<<--- troca o caminho abaixo pela pasta real do seu servidor
+    into 'C:/Users/lucas/Desktop/redevex.com.br/plugins'
+
+    rename { "Solary-Economy-${project.version}.jar" }
+
+    // evita erro caso algum .lck esteja na pasta
+    exclude '**/*.lck'
+    doNotTrackState("Plugin folder may contain locked files")
+}
+
+// build chama o copyPlugin automaticamente
+tasks.build {
+    dependsOn(tasks.named('copyPlugin'))
+}
