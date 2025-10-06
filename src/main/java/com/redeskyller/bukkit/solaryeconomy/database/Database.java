@@ -37,6 +37,7 @@ public abstract class Database {
 		try {
 			if (checkConnection())
 				this.connection.close();
+			System.out.println("[Solary-Economy] Conexão com o banco de dados finalizada.");
 
 			this.connection = null;
 		} catch (Exception exception) {
