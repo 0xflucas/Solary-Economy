@@ -1,8 +1,8 @@
-name: "${project.name}"
-main: "${project.mainClass}"
-version: "${project.version}"
-description: "${project.description}"
-author: "${project.author}"
+name: "Solary-Economy"
+main: "com.redeskyller.bukkit.solaryeconomy.SolaryEconomy"
+version: "1.5.3"
+description: "Um sistema de economia para seu servidor Minecraft."
+authors: ["Sr_Edition", "0xflucas"]
 softdepend: ["Vault", "LegendChat", "PlaceholderAPI"]
 load: "STARTUP"
 commands:
